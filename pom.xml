@@ -9,6 +9,16 @@
 
   <name>ma</name>
   <url>http://maven.apache.org</url>  
+	<properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <gatling.version>${project.version}</gatling.version>
+    <gatling-plugin.version>3.0.1</gatling-plugin.version>
+    <scala-maven-plugin.version>3.4.4</scala-maven-plugin.version>
+    <gatling.simulations.package>View</gatling.simulations.package>
+     <gatling.simulation.name>RecordedSimulation</gatling.simulation.name>
+  </properties>
 <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -17,11 +27,17 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-	      <groupId>io.gatling.highcharts</groupId>
-	      <artifactId>gatling-charts-highcharts</artifactId>
-	      <version>${gatling.version}</version>
-	      <scope>test</scope>
-	    </dependency>
+    <groupId>io.gatling.highcharts</groupId>
+    <artifactId>gatling-charts-highcharts</artifactId>
+    <version>3.0.1.1</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>3.7.1</version>
+</dependency>
 		
 	</dependencies>
 <!--  -->	
@@ -38,13 +54,19 @@
 </formats>
 </configuration>
 	
-</plugin>
-	<plugin>
+<plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>${scala-maven-plugin.version}</version>
+      </plugin>
+      <plugin>
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
         <version>${gatling-plugin.version}</version>
+         <configuration>
+                <simulationsFolder>src/View</simulationsFolder>
+                </configuration>
       </plugin>
-</plugins>
 </build>
 	
 
