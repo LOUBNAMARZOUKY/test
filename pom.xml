@@ -67,6 +67,7 @@
                 <simulationsFolder>src/View</simulationsFolder>
                 </configuration>
       </plugin>
+	    </plugins>
 </build>
 	
 
