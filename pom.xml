@@ -9,6 +9,9 @@
 
   <name>ma</name>
   <url>http://maven.apache.org</url>
+  <groupId>io.gatling</groupId>
+  <artifactId>gatling-maven-plugin-demo</artifactId>
+  <version>3.0.2</version>
 <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -16,6 +19,12 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+      <groupId>io.gatling.highcharts</groupId>
+      <artifactId>gatling-charts-highcharts</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
 		
 	</dependencies>
 <!--  -->	
