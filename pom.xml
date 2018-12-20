@@ -8,14 +8,7 @@
   <packaging>jar</packaging>
 
   <name>ma</name>
-  <url>http://maven.apache.org</url>
-<properties>
-    <gatling.version>${project.version}</gatling.version>
-    <gatling-plugin.version>3.0.1</gatling-plugin.version>
-    <scala-maven-plugin.version>3.4.4</scala-maven-plugin.version>
-  </properties>
-
-  
+  <url>http://maven.apache.org</url>  
 <dependencies>
 		<dependency>
 			<groupId>junit</groupId>
